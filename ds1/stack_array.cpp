@@ -1,5 +1,6 @@
 #include<iostream>
 #define STACK_MAX 10
+
 //  Last-In-First-Out (LIFO) principle
 
 /*
@@ -24,11 +25,19 @@ void printStack();
 int main()
 {
 
-    push(23);
-    push(2323);
-    pop();
+    push(1);
+    push(2);
+    push(3);
+    push(4);
+    push(5);
+    push(6);
+    
     printStack();
 
+    printf("Popping one element out ...\n");
+    pop();
+
+    printStack();
 
     return 0;
 }
@@ -60,7 +69,7 @@ int IsFull(){
 void printStack()
 {
     printf("Printing the Current Stack:- \n");
-    int i =1;
-    for(;i<=top;i++)
+    int i =top;
+    for(;i>=1;i--)
         printf("%d \n",stack_arr[i]);
 }
